@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mobiq Tech | Web, Mobile App & AI Development</title>
+
+<meta name="description" content="Mobiq Tech builds modern websites, mobile applications, AI solutions and business automation systems for businesses worldwide.">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2360A5FA'/%3E%3Cstop offset='.35' stop-color='%2334D399'/%3E%3Cstop offset='.65' stop-color='%23FACC15'/%3E%3Cstop offset='1' stop-color='%23F472B6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='white'/%3E%3Cpath d='M15 75V25h12l23 29 23-29h12v50H72V46L50 73 28 46v29z' fill='url(%23g)'/%3E%3C/svg%3E">
+
+<style>
+:root {
+    --blue: #60A5FA;
+    --green: #34D399;
+    --yellow: #FACC15;
+    --pink: #F472B6;
+    --dark: #172033;
+    --text: #586174;
+    --light: #F8FAFC;
+    --border: #E8ECF2;
+    --gradient: linear-gradient(110deg, #60A5FA, #34D399, #FACC15, #F472B6);
+    --shadow: 0 15px 45px rgba(30, 41, 59, .08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: min(1160px, 92%);
+    margin: auto;
+}
+
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-line {
+    width: 65px;
+    height: 5px;
+    border-radius: 20px;
+    background: var(--gradient);
+    margin: 18px auto;
+}
+
+.section {
+    padding: 95px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -1.5px;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #3B82F6;
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-mark {
+    width: 39px;
+    height: 39px;
+    border-radius: 11px;
+    background: var(--gradient);
+    display: grid;
+    place-items: center;
+    color: white;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4B5563;
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: #3B82F6;
+}
+
+.nav-button {
+    padding: 12px 20px;
+    border-radius: 30px;
+    color: white !important;
+    background: var(--gradient);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--dark);
+}
+
+/* HERO */
+
+.hero {
+    padding: 95px 0 75px;
+    background:
+        radial-gradient(circle at 10% 10%, rgba(96,165,250,.10), transparent 30%),
+        radial-gradient(circle at 90% 30%, rgba(244,114,182,.10), transparent 30%),
+        #fff;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 45px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.1;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+
+.hero-content p {
+    color: var(--text);
+    font-size: 16px;
+    max-width: 680px;
+    margin: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s;
+    border: none;
+}
+
+.btn-primary {
+    color: white;
+    background: var(--gradient);
+    box-shadow: 0 8px 22px rgba(96,165,250,.2);
+}
+
+.btn-outline {
+    color: var(--dark);
+    border: 1px solid var(--border);
+    background: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.hero-slider {
+    position: relative;
+    max-width: 1050px;
+    height: 420px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    background: #E5E7EB;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15,23,42,.45), transparent 80%);
+}
+
+.hero-slide-caption {
+    position: absolute;
+    z-index: 2;
+    bottom: 35px;
+    left: 35px;
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0,0,0,.3);
+}
+
+.slider-controls {
+    position: absolute;
+    z-index: 5;
+    bottom: 25px;
+    right: 30px;
+    display: flex;
+    gap: 9px;
+}
+
+.slider-controls button {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.6);
+    color: white;
+    background: rgba(0,0,0,.25);
+    font-size: 18px;
+}
+
+/* TRUST STRIP */
+
+.trust-strip {
+    padding: 27px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.trust-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* SERVICES */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    background: white;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+    border-color: #BFDBFE;
+}
+
+.service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 22px;
+    background: linear-gradient(135deg, #DBEAFE, #FCE7F3);
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.service-card a {
+    color: #3B82F6;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ABOUT */
+
+.about {
+    background: var(--light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.about-content h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.about-point {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.about-point span {
+    color: #34D399;
+    margin-right: 7px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    background: white;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    overflow: hidden;
+    background: white;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.project-gallery {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+    background: #F1F5F9;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.project-gallery img.active {
+    display: block;
+    animation: imageFade .45s ease;
+}
+
+@keyframes imageFade {
+    from { opacity: .5; }
+    to { opacity: 1; }
+}
+
+.project-controls {
+    position: absolute;
+    inset: 50% 12px auto;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.project-controls button {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,.9);
+    color: var(--dark);
+    font-size: 18px;
+    pointer-events: auto;
+}
+
+.project-dots {
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.project-dots button {
+    width: 7px;
+    height: 7px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255,255,255,.6);
+}
+
+.project-dots button.active {
+    width: 21px;
+    background: white;
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-info h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.project-info p {
+    font-size: 12px;
+    color: var(--text);
+}
+
+.project-type {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    color: #3B82F6;
+    background: #EFF6FF;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* PROCESS */
+
+.process {
+    background: var(--light);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.process-card {
+    text-align: center;
+    padding: 25px 18px;
+}
+
+.process-number {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 18px;
+    background: var(--gradient);
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.process-card h3 {
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.process-card p {
+    font-size: 12px;
+    color: var(--text);
+}
+
+/* CTA */
+
+.cta {
+    padding: 85px 0;
+    background: linear-gradient(120deg, #EFF6FF, #ECFDF5, #FDF2F8);
+}
+
+.cta-box {
+    text-align: center;
+    max-width: 720px;
+    margin: auto;
+}
+
+.cta-box h2 {
+    font-size: clamp(29px, 4vw, 43px);
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+    margin-bottom: 17px;
+}
+
+.cta-box p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 27px;
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 50px;
+}
+
+.contact-info h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 13px;
+    margin-bottom: 22px;
+    align-items: flex-start;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #EFF6FF;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.contact-item span,
+.contact-item a {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.contact-form {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    background: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--blue);
+}
+
+.form-group textarea {
+    height: 125px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: white;
+    padding: 55px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 35px;
+    padding-bottom: 40px;
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+    font-size: 13px;
+    margin-top: 17px;
+    max-width: 280px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.footer-column a {
+    display: block;
+    color: #9CA3AF;
+    font-size: 12px;
+    margin-bottom: 11px;
+    transition: .2s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #9CA3AF;
+    font-size: 11px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 23px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25D366;
+    display: grid;
+    place-items: center;
+    z-index: 999;
+    box-shadow: 0 7px 25px rgba(0,0,0,.2);
+    transition: .25s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+.whatsapp-float svg {
+    width: 31px;
+    height: 31px;
+    fill: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .nav-links {
+        gap: 17px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 650px) {
+    .section {
+        padding: 70px 0;
+    }
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .nav-button {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 65px 0 55px;
+    }
+
+    .hero-content h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-slider {
+        height: 280px;
+        border-radius: 14px;
+    }
+
+    .hero-slide-caption {
+        left: 18px;
+        bottom: 20px;
+        font-size: 15px;
+    }
+
+    .slider-controls {
+        right: 15px;
+        bottom: 14px;
+    }
+
+    .slider-controls button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .trust-content {
+        gap: 17px;
+        font-size: 11px;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .portfolio-grid {
+        gap: 20px;
+    }
+
+    .project-gallery {
+        height: 235px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form {
+        padding: 22px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 15px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .whatsapp-float {
+        width: 53px;
+        height: 53px;
+        right: 15px;
+        bottom: 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            <span class="logo-mark">M</span>
+            <span>Mobiq<span class="gradient-text">Tech</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact" class="nav-button">Let's Talk</a></li>
+        </ul>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container">
+
+        <div class="hero-content">
+            <span class="tag">Technology. Innovation. Growth.</span>
+
+            <h1>
+                We Build Digital Solutions That
+                <span class="gradient-text">Move Businesses Forward.</span>
+            </h1>
+
+            <p>
+                From modern websites and mobile applications to intelligent AI
+                solutions and business automation, we help businesses turn ideas
+                into powerful digital products.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Start a Project →</a>
+                <a href="#portfolio" class="btn btn-outline">Explore Our Work</a>
+            </div>
+        </div>
+
+        <!-- THREE-IMAGE HERO SLIDER -->
+        <div class="hero-slider" id="heroSlider">
+
+            <div class="hero-slide active">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=85" alt="Web developer working on a modern website">
+                <div class="hero-slide-caption">Modern Website Development</div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9a?auto=format&fit=crop&w=1600&q=85" alt="Mobile application displayed on a smartphone">
+                <div class="hero-slide-caption">Powerful Mobile Applications</div>
+            </div>
+
+            <div class="hero-slide">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=85" alt="Artificial intelligence technology concept">
+                <div class="hero-slide-caption">AI & Business Automation</div>
+            </div>
+
+            <div class="slider-controls">
+                <button type="button" id="heroPrev" aria-label="Previous slide">‹</button>
+                <button type="button" id="heroNext" aria-label="Next slide">›</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+    <div class="container trust-content">
+        <span>Web Development</span>
+        <span>Mobile Applications</span>
+        <span>AI Solutions</span>
+        <span>Business Automation</span>
+        <span>UI/UX Design</span>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="tag">What We Do</span>
+            <h2>Technology Solutions Built Around Your <span class="gradient-text">Business.</span></h2>
+            <div class="gradient-line"></div>
+            <p>
+                We combine creative thinking and modern technology to build
+                practical solutions that help businesses operate, grow and compete.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Website Development</h3>
+                <p>
+                    Professional business websites, landing pages, e-commerce
+                    platforms and custom web applications designed for performance.
+                </p>
+                <a href="#contact">Discuss your project →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Mobile App Development</h3>
+                <p>
+                    Custom Android and iOS applications built to deliver smooth
+                    experiences and solve real business problems.
+                </p>
+                <a href="#contact">Discuss your project →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>AI Development</h3>
+                <p>
+                    AI-powered chatbots, intelligent assistants, custom AI
+                    integrations and solutions that improve business operations.
+                </p>
+                <a href="#contact">Discuss your project →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Business Automation</h3>
+                <p>
+                    Workflow automation, CRM integrations and connected systems
+                    that reduce repetitive tasks and save valuable time.
+                </p>
+                <a href="#contact">Discuss your project →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>
+                    Clean interfaces, user-friendly experiences and product
+                    designs that make digital products easier to use.
+                </p>
+                <a href="#contact">Discuss your project →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>E-commerce Solutions</h3>
+                <p>
+                    Online stores, payment integrations, product management
+                    systems and custom shopping experiences.
+                </p>
+                <a href="#contact">Discuss your project →</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+    <div class="container about-grid">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=85"
+                alt="Technology team collaborating on a project"
+                loading="lazy">
+        </div>
+
+        <div class="about-content">
+            <span class="tag">About Mobiq Tech</span>
+
+            <h2>We Turn Ideas Into <span class="gradient-text">Digital Reality.</span></h2>
+
+            <p>
+                Mobiq Tech is a technology development team focused on helping
+                businesses and entrepreneurs build useful, reliable and scalable
+                digital products.
+            </p>
+
+            <p>
+                We bring together design, development and technology expertise
+                to create solutions that address real challenges. Whether you
+                are starting a new business or improving an existing operation,
+                we work with you from idea to execution.
+            </p>
+
+            <div class="about-points">
+                <div class="about-point"><span>✓</span> Practical solutions</div>
+                <div class="about-point"><span>✓</span> Modern technology</div>
+                <div class="about-point"><span>✓</span> Clear communication</div>
+                <div class="about-point"><span>✓</span> Scalable development</div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary" style="margin-top:28px;">Work With Us →</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="tag">Our Portfolio</span>
+            <h2>Ideas Brought to <span class="gradient-text">Life.</span></h2>
+            <div class="gradient-line"></div>
+            <p>
+                Explore a selection of digital product concepts across websites,
+                mobile applications, e-commerce and intelligent technology.
+            </p>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="tag">How We Work</span>
+            <h2>A Simple Process. <span class="gradient-text">Powerful Results.</span></h2>
+            <div class="gradient-line"></div>
+            <p>
+                A clear development process helps us understand your goals
+                and deliver solutions that meet your expectations.
+            </p>
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <div class="process-number">01</div>
+                <h3>Discovery</h3>
+                <p>We understand your idea, goals, requirements and business needs.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">02</div>
+                <h3>Planning & Design</h3>
+                <p>We map out the solution and create the design and development plan.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">03</div>
+                <h3>Development</h3>
+                <p>We build, integrate and test the solution carefully.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">04</div>
+                <h3>Delivery</h3>
+                <p>We prepare your product for launch and provide the agreed support.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+    <div class="container cta-box">
+
+        <span class="tag">Have an Idea?</span>
+
+        <h2>Let's Build Something <span class="gradient-text">Worth Building.</span></h2>
+
+        <p>
+            Tell us what you have in mind. We'll help you explore the right
+            technology, plan the project and move towards a working solution.
+        </p>
+
+        <a href="#contact" class="btn btn-primary">Start a Conversation →</a>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="tag">Contact Us</span>
+            <h2>Let's Talk About Your <span class="gradient-text">Next Project.</span></h2>
+            <div class="gradient-line"></div>
+            <p>
+                Have a project in mind or need help choosing the right solution?
+                Get in touch with our team.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+                <h3>Get in touch</h3>
+
+                <p>
+                    We welcome project enquiries, business collaborations
+                    and conversations about new ideas.
+                </p>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:techmobiq@gmail.com">techmobiq@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <strong>Phone</strong>
+                        <a href="tel:+447828917846">+44 7828 917846</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <a href="https://wa.me/447828917846" target="_blank" rel="noopener">
+                            Chat with our team
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🌍</div>
+                    <div>
+                        <strong>Availability</strong>
+                        <span>Working with clients worldwide</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">What do you need?</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option>Website Development</option>
+                        <option>Mobile App Development</option>
+                        <option>AI Development</option>
+                        <option>Business Automation</option>
+                        <option>UI/UX Design</option>
+                        <option>E-commerce Development</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us about your project</label>
+                    <textarea id="message" name="message" placeholder="Describe your idea or project..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Project Enquiry →</button>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-mark">M</span>
+                    <span>Mobiq<span class="gradient-text">Tech</span></span>
+                </a>
+
+                <p>
+                    Building modern digital products, intelligent solutions
+                    and technology that helps businesses move forward.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Our Services</h4>
+                <a href="#services">Web Development</a>
+                <a href="#services">Mobile Apps</a>
+                <a href="#services">AI Solutions</a>
+                <a href="#services">Automation</a>
+                <a href="#services">UI/UX Design</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="mailto:techmobiq@gmail.com">Email Us</a>
+                <a href="tel:+447828917846">+44 7828 917846</a>
+                <a href="https://wa.me/447828917846" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> Mobiq Tech. All rights reserved.</span>
+            <span>Designed with purpose. Built with technology.</span>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a
+    href="https://wa.me/447828917846?text=Hello%20Mobiq%20Tech%2C%20I%20would%20like%20to%20discuss%20a%20project."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with Mobiq Tech on WhatsApp">
+
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16.02 3C8.85 3 3.02 8.76 3.02 15.85c0 2.24.59 4.42 1.72 6.34L3 29l7.05-1.83a13.1 13.1 0 0 0 5.97 1.43h.01c7.17 0 13-5.77 13-12.86A12.75 12.75 0 0 0 16.02 3zm0 23.43h-.01a10.9 10.9 0 0 1-5.24-1.34l-.38-.22-4.18 1.09 1.12-4.04-.25-.4a10.55 10.55 0 0 1-1.63-5.67c0-5.83 4.76-10.57 10.58-10.57 2.82 0 5.48 1.1 7.47 3.09a10.48 10.48 0 0 1 3.1 7.47c0 5.83-4.76 10.59-10.58 10.59zm5.81-7.93c-.32-.16-1.9-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.84 1.05-1.03 1.26-.19.21-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.61-1.9-1.8-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.55-.73-.56l-.62-.01c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69 0 1.58 1.16 3.12 1.32 3.34.16.21 2.29 3.48 5.54 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.77 2.17-1.52.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37z"/>
+    </svg>
+</a>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    menuToggle.textContent = navLinks.classList.contains("show") ? "×" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.textContent = "☰";
+    });
+});
+
+/* HERO SLIDER */
+const heroSlides = document.querySelectorAll(".hero-slide");
+let heroIndex = 0;
+let heroTimer;
+
+function showHeroSlide(index) {
+    heroSlides.forEach(slide => slide.classList.remove("active"));
+    heroIndex = (index + heroSlides.length) % heroSlides.length;
+    heroSlides[heroIndex].classList.add("active");
+}
+
+function startHeroTimer() {
+    clearInterval(heroTimer);
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        heroTimer = setInterval(() => {
+            showHeroSlide(heroIndex + 1);
+        }, 5000);
+    }
+}
+
+document.getElementById("heroNext").addEventListener("click", () => {
+    showHeroSlide(heroIndex + 1);
+    startHeroTimer();
+});
+
+document.getElementById("heroPrev").addEventListener("click", () => {
+    showHeroSlide(heroIndex - 1);
+    startHeroTimer();
+});
+
+startHeroTimer();
+
+/* PORTFOLIO PROJECT DATA */
+const projects = [
+    {
+        title: "Modern Business Website",
+        type: "Website Development",
+        description: "A clean digital presence concept for a professional business.",
+        images: [
+            "photo-1460925895917-afdab827c52f",
+            "photo-1498050108023-c5249f4df085",
+            "photo-1559028012-481c04fa702d",
+            "photo-1467232004584-a241de8bcf5d"
+        ]
+    },
+    {
+        title: "Fitness & Wellness App",
+        type: "Mobile Application",
+        description: "A fitness application concept focused on tracking and engagement.",
+        images: [
+            "photo-1517836357463-d25dfeac3438",
+            "photo-1518611012118-696072aa579a",
+            "photo-1534438327276-14e5300c3a48",
+            "photo-1571019613454-1cb2f99b2d8b"
+        ]
+    },
+    {
+        title: "E-commerce Store",
+        type: "E-commerce",
+        description: "An online shopping experience concept with modern product presentation.",
+        images: [
+            "photo-1556742049-0cfed4f6a45d",
+            "photo-1472851294608-062f824d29cc",
+            "photo-1556742502-ec7c0e9f34b1",
+            "photo-1523275335684-37898b6baf30"
+        ]
+    },
+    {
+        title: "AI Assistant Platform",
+        type: "AI Development",
+        description: "An intelligent assistant interface concept for business support.",
+        images: [
+            "photo-1677442136019-21780ecad995",
+            "photo-1675557009875-436f9e3d8e9e",
+            "photo-1676299081847-824916de030a",
+            "photo-1485827404703-89b55fcc595e"
+        ]
+    },
+    {
+        title: "Real Estate Platform",
+        type: "Web Application",
+        description: "A property discovery platform concept with a clean browsing experience.",
+        images: [
+            "photo-1560518883-ce09059eeffa",
+            "photo-1600607687939-ce8a6c25118c",
+            "photo-1600566753086-00f18fb6b3ea",
+            "photo-1600585154340-be6161a56a0c"
+        ]
+    },
+    {
+        title: "Travel Booking App",
+        type: "Mobile Application",
+        description: "A travel and accommodation booking application concept.",
+        images: [
+            "photo-1436491865332-7a61a109cc05",
+            "photo-1464822759023-fed622ff2c3b",
+            "photo-1500530855697-b586d89ba3ee",
+            "photo-1518837695005-2083093ee35b"
+        ]
+    },
+    {
+        title: "Finance Dashboard",
+        type: "Web Application",
+        description: "A financial dashboard concept for viewing business information.",
+        images: [
+            "photo-1551288049-bebda4e38f71",
+            "photo-1460925895917-afdab827c52f",
+            "photo-1554224155-6726b3ff858f",
+            "photo-1556761175-b413da4baf72"
+        ]
+    },
+    {
+        title: "Food Delivery Platform",
+        type: "Mobile Application",
+        description: "A food ordering and delivery experience concept.",
+        images: [
+            "photo-1504674900247-0877df9cc836",
+            "photo-1513104890138-7c749659a591",
+            "photo-1540189549336-e6e99c3679fe",
+            "photo-1565299624946-b28f40a0ae38"
+        ]
+    },
+    {
+        title: "Digital Agency Website",
+        type: "Website Development",
+        description: "A modern agency website concept built around clear communication.",
+        images: [
+            "photo-1497366754035-f200968a6e72",
+            "photo-1497366216548-37526070297c",
+            "photo-1497366811353-6870744d04b2",
+            "photo-1524758631624-e2822e304c36"
+        ]
+    },
+    {
+        title: "Project Management App",
+        type: "Business Application",
+        description: "A productivity and project coordination application concept.",
+        images: [
+            "photo-1611224923853-80b023f02d71",
+            "photo-1552664730-d307ca884978",
+            "photo-1521737711867-e3b97375f902",
+            "photo-1553877522-43269d4ea984"
+        ]
+    }
+];
+
+/* BUILD PORTFOLIO CARDS */
+const portfolioGrid = document.getElementById("portfolioGrid");
+
+projects.forEach((project, projectIndex) => {
+    const card = document.createElement("article");
+    card.className = "project-card";
+
+    const gallery = document.createElement("div");
+    gallery.className = "project-gallery";
+
+    project.images.forEach((imageId, imageIndex) => {
+        const img = document.createElement("img");
+
+        img.src = `https://images.unsplash.com/${imageId}?auto=format&fit=crop&w=1000&q=80`;
+        img.alt = `${project.title} preview ${imageIndex + 1}`;
+        img.loading = "lazy";
+
+        if (imageIndex === 0) {
+            img.classList.add("active");
+        }
+
+        gallery.appendChild(img);
+    });
+
+    const controls = document.createElement("div");
+    controls.className = "project-controls";
+
+    const previous = document.createElement("button");
+    previous.type = "button";
+    previous.innerHTML = "‹";
+    previous.setAttribute("aria-label", "Previous project image");
+
+    const next = document.createElement("button");
+    next.type = "button";
+    next.innerHTML = "›";
+    next.setAttribute("aria-label", "Next project image");
+
+    controls.append(previous, next);
+    gallery.appendChild(controls);
+
+    const dots = document.createElement("div");
+    dots.className = "project-dots";
+
+    project.images.forEach((_, imageIndex) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Show image ${imageIndex + 1}`);
+
+        if (imageIndex === 0) {
+            dot.classList.add("active");
+        }
+
+        dots.appendChild(dot);
+    });
+
+    gallery.appendChild(dots);
+
+    const info = document.createElement("div");
+    info.className = "project-info";
+
+    const type = document.createElement("span");
+    type.className = "project-type";
+    type.textContent = project.type;
+
+    const title = document.createElement("h3");
+    title.textContent = project.title;
+
+    const description = document.createElement("p");
+    description.textContent = project.description;
+
+    info.append(type, title, description);
+    card.append(gallery, info);
+    portfolioGrid.appendChild(card);
+
+    /* INDIVIDUAL PROJECT SLIDER */
+    const images = gallery.querySelectorAll("img");
+    const dotButtons = dots.querySelectorAll("button");
+    let currentImage = 0;
+
+    function showProjectImage(index) {
+        currentImage = (index + images.length) % images.length;
+
+        images.forEach((img, i) => {
+            img.classList.toggle("active", i === currentImage);
+        });
+
+        dotButtons.forEach((dot, i) => {
+            dot.classList.toggle("active", i === currentImage);
+        });
+    }
+
+    previous.addEventListener("click", () => {
+        showProjectImage(currentImage - 1);
+    });
+
+    next.addEventListener("click", () => {
+        showProjectImage(currentImage + 1);
+    });
+
+    dotButtons.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showProjectImage(index);
+        });
+    });
+});
+
+/* CONTACT FORM */
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    const subject = encodeURIComponent("New Project Enquiry - Mobiq Tech");
+
+    const body = encodeURIComponent(
+        `Hello Mobiq Tech,\n\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Service: ${service}\n\n` +
+        `Project Details:\n${message}`
+    );
+
+    window.location.href =
+        `mailto:techmobiq@gmail.com?subject=${subject}&body=${body}`;
+});
+
+/* AUTOMATIC COPYRIGHT YEAR */
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
